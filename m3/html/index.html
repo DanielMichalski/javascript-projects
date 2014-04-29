@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Zamowienia</title>
+    <script type="text/javascript" src="../scripts/script.js"></script>
+</head>
+<body>
+<div id="frame">
+    <form name="orderForm" action="#" method="POST">
+        <table>
+            <tr>
+                <td> <label for="personalia">Personalia:</label> </td>
+                <td> <input type="text" id="personalia" name="personalia" value=""> </td>
+            </tr>
+            <tr>
+                <td> <label for="cakedonuts">Liczba pączków z nadzieniem:</label> </td>
+                <td> <input type="text" id="cakedonuts" name="cakedonuts"
+                           value="" onchange="updateOrder();"/> </td>
+            </tr>
+            <tr>
+                <td> <label for="zLukrem">Liczba pączków z lukrem</label> </td>
+                <td> <input type="text" id="zLukrem" name="zLukrem"
+                           value="" onchange="updateOrder();"/> </td>
+            </tr>
+            <tr>
+                <td> <label for="zaIleOdbior">Za ile minut odbiór:</label> </td>
+                <td> <input type="text" id="zaIleOdbior" name="zaIleOdbior"
+                       value="" onchange="updateOrder();"/> </td>
+            </tr>
+            <tr>
+                <td> <label for="sumaCzesciowa">Suma częściowa:</label> </td>
+                <td> <input type="text" id="sumaCzesciowa" name="sumaCzesciowa"
+                            disabled="disabled"/> </td>
+            </tr>
+            <tr>
+                <td> <label for="podatek">Podatek:</label> </td>
+                <td> <input type="text" id="podatek" name="podatek"
+                            disabled="disabled"/> </td>
+            </tr>
+            <tr>
+                <td> <label for="wartoscSumaryczna">Wartość sumaryczna:</label> </td>
+                <td> <input type="text" id="wartoscSumaryczna" name="wartoscSumaryczna"
+                            disabled="disabled"/> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td> <input type="button" value="Złóż zamówienie" onclick="placeOrder(this.form);"/> </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
